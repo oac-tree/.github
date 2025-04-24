@@ -29,7 +29,7 @@ Build and install the packages from the following repositories in that order:
 * `oac-tree-epics`
 * `oac-tree-mathexpr`
 
-For each repository, run the following command in the shell
+For each repository, run the following commands in the shell
 
 ```bash
 cd <REPOSITORY>
@@ -45,6 +45,8 @@ Where we used these variables:
 * `<REPOSITORY>`: repository folder
 * `<BUILD_DIR>`: build directory to use (e.g. `build`)
 * `<INSTALL_PREFIX>`: installation prefix folder for cmake. This command line option can be omitted if you want to install into the default install location for your distribution
+
+The `oac-tree` plugins will be installed in `<INSTALL_PREFIX>/lib/oac-tree/plugins` (or a similar folder where `lib` is replaced by a distribution specific folder name, e.g. `lib64`). To be able to load these plugins at runtime, this folder needs to be added to the library search path by setting `LD_LIBRARY_PATH` or adding a file with this folder to `/etc/ld.so.conf.d/` and running `ldconfig`.
 
 ### GUI
 
