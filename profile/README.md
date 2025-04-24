@@ -8,3 +8,5 @@ This github organization contains the main packages for oac-tree, a C++ framewor
 * `oac-tree-epics`: oac-tree plugin to interact with EPICS
 * `oac-tree-control`: oac-tree plugin that provides basic control node instructions
 * `oac-tree-mathexpr`: oac-tree plugin for the evaluation of mathematical expressions
+
+See [oac-tree API documentation](https://oac-tree.github.io/oac-tree-docs/)
