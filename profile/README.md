@@ -21,28 +21,31 @@ The installation of the `oac-tree` packages requires a working installation of `
 
 ### Build and install steps
 
-Build and install the packages from the following repositories in that order:
+#### Using a single super build
 
-* `oac-tree`
-* `oac-tree-server`
-* `oac-tree-control`
-* `oac-tree-epics`
-* `oac-tree-mathexpr`
-
-For each repository, run the following commands in the shell
+Fetch the repo for the super build:
 
 ```bash
-cd <REPOSITORY>
+git clone --recurse-submodules https://github.com/oac-tree/oac-tree-bundle.git
+```
+
+Create a build directory
+
+```bash
 mkdir <BUILD_DIR>
 cd <BUILD_DIR>
-cmake -DCOA_FETCH_DEPS=ON -DCMAKE_INSTALL_PREFIX=<INSTALL_PREFIX> ..
+```
+
+Run cmake and make (NOTE: this will install everything into the specified install prefix!):
+
+```bash
+cmake -DCMAKE_INSTALL_PREFIX=<INSTALL_PREFIX> <SOURCE_DIR>
 make
-make install
 ```
 
 Where we used these variables:
 
-* `<REPOSITORY>`: repository folder
+* `<SOURCE_DIR>`: top folder of the `oac-tree-bundle` repository
 * `<BUILD_DIR>`: build directory to use (e.g. `build`)
 * `<INSTALL_PREFIX>`: installation prefix folder for cmake. This command line option can be omitted if you want to install into the default install location for your distribution
 
