@@ -50,7 +50,3 @@ Where we used these variables:
 * `<INSTALL_PREFIX>`: installation prefix folder for cmake. This command line option can be omitted if you want to install into the default install location for your distribution
 
 The `oac-tree` plugins will be installed in `<INSTALL_PREFIX>/lib/oac-tree/plugins` (or a similar folder where `lib` is replaced by a distribution specific folder name, e.g. `lib64`). To be able to load these plugins at runtime, this folder needs to be added to the library search path by setting `LD_LIBRARY_PATH` or adding a file with this folder to `/etc/ld.so.conf.d/` and running `ldconfig`.
-
-### GUI
-
-Installation instrutions of the GUI package will follow later.
