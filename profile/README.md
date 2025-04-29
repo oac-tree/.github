@@ -17,7 +17,12 @@ See [oac-tree documentation](https://oac-tree.github.io/oac-tree-docs/)
 
 ### Prerequisites
 
-The installation of the `oac-tree` packages requires a working installation of `epics-base` and `pvxs`. This includes defining the environment variables `EPICS_BASE`, `PVXS_DIR` and making their executables and libraries available in the standard search paths.
+The installation of the `oac-tree` packages requires a working installation of `epics-base` and `pvxs`:
+
+* [epics-base](https://github.com/epics-base/epics-base.git)
+* [pvxs](https://github.com/mdavidsaver/pvxs.git)
+
+This includes defining the environment variables `EPICS_BASE`, `PVXS_DIR` and making their executables and libraries available in the standard search paths.
 
 Furthermore, the following dependencies need to be installed: `cmake`, `libxml2`, `gtest`.
 
