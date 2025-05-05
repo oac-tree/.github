@@ -24,7 +24,7 @@ The installation of the `oac-tree` packages requires a working installation of `
 
 This includes defining the environment variables `EPICS_BASE`, `PVXS_DIR` and making their executables and libraries available in the standard search paths.
 
-Furthermore, the following dependencies need to be installed: `cmake`, `libxml2`, `gtest`.
+Furthermore, the following dependencies need to be installed: `cmake`, `libxml2`, `gtest`. The GUI will also require `qt6-base, qt6-charts, qt6-svg, qt6-tools`. Please note, that the concrete names of packages can be slightly different, depending on the concrete type of your Linux distribution.
 
 ### Build and install steps
 
@@ -43,7 +43,7 @@ mkdir <BUILD_DIR>
 cd <BUILD_DIR>
 ```
 
-Run cmake and make (NOTE: this will install everything into the specified install prefix!):
+Run cmake and make (NOTE: this will build *and* install everything into the specified install prefix!):
 
 ```bash
 cmake -DCMAKE_INSTALL_PREFIX=<INSTALL_PREFIX> <SOURCE_DIR>
@@ -57,3 +57,5 @@ Where we used these variables:
 * `<INSTALL_PREFIX>`: installation prefix folder for cmake. This command line option can be omitted if you want to install into the default install location for your distribution
 
 The `oac-tree` plugins will be installed in `<INSTALL_PREFIX>/lib/oac-tree/plugins` (or a similar folder where `lib` is replaced by a distribution specific folder name, e.g. `lib64`). To be able to load these plugins at runtime, this folder needs to be added to the library search path by setting `LD_LIBRARY_PATH` or adding a file with this folder to `/etc/ld.so.conf.d/` and running `ldconfig`.
+
+Alternatively, one can run `source <INSTALL_PREFIX>/bin/oac-tree-path.sh` script each time before the use of `oac-tree`, to add installation directories in `PATH` and `LD_LIBRARY_PATH`.
