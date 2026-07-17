@@ -1,7 +1,7 @@
+# oac-tree framework
+
 [![Linux](https://github.com/oac-tree/oac-tree-bundle/actions/workflows/linux-build.yml/badge.svg)](https://github.com/oac-tree/oac-tree-bundle/actions/workflows/linux-build.yml)
 [![macOS](https://github.com/oac-tree/oac-tree-bundle/actions/workflows/macos-build.yml/badge.svg)](https://github.com/oac-tree/oac-tree-bundle/actions/workflows/macos-build.yml)
-
-# oac-tree framework
 
 This github organization contains the main packages for oac-tree, a C++ framework for creating and executing operational procedures using behavior trees, and its dependencies:
 
